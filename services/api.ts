@@ -5,7 +5,7 @@ export const getMovieListAsync = async () => {
     // console.log(results);
     return await fetch("https://freetestapi.com/api/v1/movies").then(res => res.json()).then((data) => data);
   } catch (error: any) {
-    throw new Error(error.message ?? "Error");
+    throw new Error(error?.message ?? "Error");
   }
 };
 
